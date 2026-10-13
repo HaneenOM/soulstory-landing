@@ -1,0 +1,15 @@
+# Local design references
+soulstory.html
+soulstory-design.pdf
+
+# Local environment and dependencies
+.env
+.env.*
+node_modules/
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
