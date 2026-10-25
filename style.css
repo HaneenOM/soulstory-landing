@@ -346,6 +346,12 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.7;
 }
 
+@media (max-width: 348px) {
+  .services-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .service-item {
   display: flex;
   gap: 14px;
@@ -467,6 +473,7 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
+.package-kicker,
 .package-price {
   font-size: 16px;
   color: #6B5550;
@@ -604,4 +611,224 @@ a { color: inherit; text-decoration: none; }
 
 .footer-tagline {
   color: #6B5550;
+}
+
+.experience-flow,
+.experience-flow * {
+  box-sizing: border-box;
+}
+
+.experience-flow {
+  padding: 96px 24px;
+  background: #FBF7F2;
+  color: #3A2A2E;
+}
+
+.experience-flow__frame {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.experience-flow__header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.experience-flow__title {
+  margin: 0;
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.experience-flow__divider {
+  width: 245px;
+  max-width: 65%;
+  height: 1px;
+  margin: 8px auto 18px;
+  background: linear-gradient(90deg, transparent, #B58A2F 22%, #B58A2F 78%, transparent);
+}
+
+.experience-flow__subtitle {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.experience-flow__body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
+}
+
+.experience-flow__gallery {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  min-height: 0;
+}
+
+.experience-flow__gallery img,
+.experience-flow__step img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.experience-flow__gallery img {
+  height: 100%;
+  min-height: 0;
+  border-radius: 24px;
+}
+
+.experience-flow__steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-flow__step {
+  position: relative;
+  min-width: 0;
+  padding: 8px 8px 12px;
+  border: 1px solid #B58A2F;
+  border-radius: 26px;
+  direction: rtl;
+}
+
+.experience-flow__step img {
+  aspect-ratio: 4 / 3;
+  border-radius: 20px 20px 0 0;
+}
+
+.experience-flow__number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 3px solid #FBF7F2;
+  border-radius: 50%;
+  background: #C7A879;
+  color: #FBF7F2;
+  font-size: 21px;
+  line-height: 1;
+}
+
+.experience-flow__step h3 {
+  margin: 10px 6px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .experience-flow__body {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .experience-flow__gallery {
+    display: block;
+  }
+
+  .experience-flow__gallery .experience-flow__main-photo {
+    aspect-ratio: 724 / 336;
+    height: auto;
+  }
+
+  .experience-flow__gallery .experience-flow__friends-photo {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-flow {
+    padding-block: 72px;
+  }
+
+  .experience-flow__subtitle {
+    font-size: 18px;
+  }
+
+  .experience-flow__steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .experience-flow__step h3 {
+    font-size: 20px;
+  }
+}
+
+.moments-section,
+.moments-section * {
+  box-sizing: border-box;
+}
+
+.moments-section {
+  padding: 56px 24px;
+  background: #EFE4D6;
+  color: #3A2A2E;
+}
+
+.moments-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.moments-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.moments-title {
+  margin: 0;
+  font-family: 'Noto Naskh Arabic', serif;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.moments-divider {
+  width: 180px;
+  max-width: 65%;
+  height: 1px;
+  margin: 8px auto 14px;
+  background: linear-gradient(90deg, transparent, #B58A2F 22%, #B58A2F 78%, transparent);
+}
+
+.moments-subtitle {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.9;
+}
+
+.moments-video {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  border-radius: 24px;
+  background: #F3E3DF;
+}
+
+@media (max-width: 600px) {
+  .moments-section {
+    padding-block: 40px;
+  }
+
+  .moments-header {
+    margin-bottom: 20px;
+  }
 }
